@@ -1,17 +1,21 @@
 <template>
-  <div>
-    
+  <div class="col-full">
+    <h1>Welcome to the Forum</h1>
+    <ThreadList :threads="threads"/>
   </div>
 </template>
 
 <script>
 import sourceData from '@/data'
-console.log(sourceData)
+import ThreadList from './ThreadList'
 export default {
   name: 'HelloWorld',
+  components: {
+    ThreadList
+  },
   data () {
     return {
-      threads: sourceData.threads,
+      threads: Object.values(sourceData.threads),
       posts: sourceData.posts,
       users: sourceData.users
     }
