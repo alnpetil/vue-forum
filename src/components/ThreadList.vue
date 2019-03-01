@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import ThreadListItem from './TheadListItem'
+import ThreadListItem from './ThreadListItem'
 export default {
   components: {
     ThreadListItem
